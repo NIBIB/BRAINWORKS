@@ -1,0 +1,82 @@
+{
+  "name": "react-app",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000/",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.4",
+    "@chakra-ui/react": "^2.4.1",
+    "@chakra-ui/theme-tools": "^2.0.5",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@reduxjs/toolkit": "^1.8.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.3.0",
+    "@types/file-saver": "^2.0.5",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^12.20.55",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-typing-effect": "^2.0.3",
+    "@types/yup": "^0.29.14",
+    "axios": "^0.27.2",
+    "axios-hooks": "^3.1.4",
+    "chart.js": "^3.9.1",
+    "chartjs-adapter-date-fns": "^2.0.0",
+    "chartjs-adapter-moment": "^1.0.0",
+    "date-fns": "^2.29.3",
+    "dompurify": "^2.4.0",
+    "dotenv-cli": "^6.0.0",
+    "formik": "^2.2.9",
+    "formik-chakra-ui": "^1.6.0",
+    "framer-motion": "^6.5.1",
+    "install": "^0.13.0",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.4",
+    "npm": "^8.15.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^3.11.0",
+    "react-idle-timer": "^5.4.2",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-scroll-parallax": "^3.3.1",
+    "react-typing-effect": "^2.0.5",
+    "schema-to-yup": "^1.11.13",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-dev": "dotenv -e .env.development npm run-script build",
+    "build-prod": "dotenv -e .env.production npm run-script build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/dompurify": "^2.3.4",
+    "@types/jquery": "^3.5.14",
+    "typescript": "^4.8.4"
+  }
+}

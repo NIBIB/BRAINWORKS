@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div id="navbar" class="uk-navbar-container" uk-navbar uk-sticky>
+    <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo">GraphAPI</a>
+        <ul class="uk-navbar-nav uk-visible@m">
+            <li><a href="{{ url_for('documentation') }}">Documentation</a></li>
+            <li><a href="{{ url_for('demo') }}">Live Demo</a></li>
+        </ul>
+        <a class="uk-navbar-item uk-navbar-toggle uk-icon uk-hidden@m" uk-toggle="target: #navbar-overlay" uk-navbar-toggle-icon></a>
+        <ul class="uk-navbar-nav">
+            {% block nav %}{% endblock %}
+        </ul>
+    </div>
+</div>
+
+<div id="navbar-overlay" class="uk-hidden@m" uk-offcanvas="mode: push; overlay: true">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav"></ul>
+    </div>
+</div>
+
+{% block body %}{% endblock %}
+</body>
+</html>

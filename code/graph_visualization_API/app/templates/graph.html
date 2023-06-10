@@ -1,0 +1,8 @@
+<div style="height: 100%; width: 100%;">
+<script src="{{url}}/build/{{version}}/js/graph.min.js"></script>
+<script>
+  let data = {{ data | tojson | safe}}
+  graph = new Graph(data)
+</script>
+<div id="graphAPI-container" style="width: 100vw; height: 100vh; min-width: 10em; min-height: 10em; max-width: 100%; max-height: 100%; overflow: hidden;"></div>
+</div>

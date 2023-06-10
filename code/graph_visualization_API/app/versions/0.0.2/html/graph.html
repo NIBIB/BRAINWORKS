@@ -1,0 +1,145 @@
+<div id="sigma-container"></div>
+
+<div id="top-left" class="interface">
+    <div id="menu" class="dropdown">
+        <button id="menu-button" class="btn" data-bs-toggle="dropdown" title="Main Menu" data-tippy-placement="bottom">
+            <img src="http://52.15.148.228/build/0.0.2/icons/three-dots.svg">
+        </button>
+        <ul class="dropdown-menu"></ul>
+    </div>
+
+    <button id="center-button" class="btn" title="Center the graph" data-tippy-placement="bottom">
+      <img src="http://52.15.148.228/build/0.0.2/icons/record-circle.svg" />
+    </button>
+
+    <button id="organize-button" class="btn" title="Organize the graph" data-tippy-placement="bottom">
+      <img src="http://52.15.148.228/build/0.0.2/icons/organize.svg" />
+    </button>
+
+    <button id="physics-button" class="btn" title="Start/Stop physics simulation" data-tippy-placement="bottom">
+        <img class="start-img" src="http://52.15.148.228/build/0.0.2/icons/play-circle.svg" />
+        <img class="stop-img" style="display:none" src="http://52.15.148.228/build/0.0.2/icons/pause-circle.svg" />
+    </button>
+
+    <div class="dropdown dropend">
+        <button id="search-button" class="btn" data-bs-toggle="dropdown" data-bs-auto-close="false" title="Search Nodes & Edges" data-tippy-placement="bottom">
+            <img src="http://52.15.148.228/build/0.0.2/icons/search.svg">
+        </button>
+        <div class="dropdown-menu p-0 mt-2">
+            <div class="hstack">
+                <button id="search-type" class="btn btn-sm btn-secondary"></button>
+                <input type="text" id="search-input"/>
+            </div>
+        </div>
+    </div>
+
+    <div id="uploaded_file" style="display: none;"></div>
+
+</div>
+
+<div id="bottom-left" class="interface">
+    <div id="data-display" class="collapse">
+        <div class="card shadow">
+          <div class="card-header">
+            <h5 class="card-title"></h5>
+            <div class="nav nav-tabs card-header-tabs" role="tablist"></div>
+          </div>
+          <div class="card-body tab-content overflow-auto">
+          </div>
+        </div>
+    </div>
+</div>
+
+<div id="top-right" class="interface justify-content-end">
+    <button id="interactables-button" class="btn" title="Graph Interactables" data-tippy-placement="left">
+      <img src="http://52.15.148.228/build/0.0.2/icons/sliders.svg" />
+    </button>
+</div>
+
+<div id="bottom-right" class="interface justify-content-end">
+    <button id="custom-popup-button" class="btn" data-tippy-placement="left">
+        <img style="font-size: 0.5rem" src="http://52.15.148.228/build/0.0.2/icons/caret-up-fill.svg"/>
+    </button>
+    <div id="custom-popup" class="collapse">
+        <div class="card shadow">
+          <div class="card-header position-relative">
+            <button type="button" class="btn-close text-reset position-absolute top-0 start-0 mt-2 ms-2" aria-label="Close"></button>
+            <h5 class="card-title start-0 ms-4"></h5>
+            <div class="nav nav-tabs card-header-tabs" role="tablist"></div>
+          </div>
+          <div class="card-body tab-content overflow-auto"></div>
+        </div>
+    </div>
+</div>
+
+<div id="custom-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+<div id="settings" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title">Settings</h3>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body"></div>
+</div>
+
+<div id="help"></div>
+
+<div id="interactables" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="tree" style="display:none" class="max-auto">
+            <span>Cluster Tree: </span>
+            <div class="btn-group border border-4 rounded-3" role="group">
+              <button id="tree_down" type="button" class="btn" title="Collapse all clusters by one level" data-tippy-placement="top">
+                  <img class="tree_minus_label" src="http://52.15.148.228/build/0.0.2/icons/dash.svg" />
+              </button>
+              <button id="tree_up" type="button" class="btn" title="Expand all clusters by one level" data-tippy-placement="top">
+                  <img class="tree_plus_label" src="http://52.15.148.228/build/0.0.2/icons/plus.svg" />
+              </button>
+            </div>
+        </div>
+        <div id="filters"></div>
+    </div>
+</div>
+
+<div id="error" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+            <span id="error-type"></span> <span id="error-header"></span>
+        </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+          <p id="error-message"></p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="right-click-menus">
+    <div id="node-menu" class="dropdown position-absolute">
+        <div id="node-menu-toggle" data-bs-toggle="dropdown"></div>
+        <ul class="dropdown-menu"></ul>
+    </div>
+    <div id="edge-menu" class="dropdown position-absolute">
+        <div id="edge-menu-toggle" data-bs-toggle="dropdown"></div>
+        <ul class="dropdown-menu"></ul>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Demo
+{% endblock %}
+
+{% block head %}
+    <script src="{{url}}/build/{{version}}/js/graph.min.js"></script>
+    <script>
+        let data = {{ data | tojson | safe }}
+        graph = new Graph(data)
+        graph.options.debug = {{ debug | tojson }}
+
+        var n = 0  // key incrementer
+        graph.ready(() => {
+            let rickroll_html = `<iframe class="position-relative start-50 translate-middle-x" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allowfullscreen></iframe>`
+
+            graph.node_display((container, data) => {
+                $(container).html(`<h4>${data.label}</h4><p>Character Role: ${data.data.role}<br>Connections: ${data.data.degree}</p>`)
+            }, "10em")
+
+            graph.add_node_menu_item("Example Item", "Executes a callback when clicked", (node) => {
+                let html = `Callback triggered for: ${node.label}`
+                graph.center_display("", html, "", 1)  // trigger the Center Display Modal
+            })
+
+            graph.add_node_menu_item("Add Node", "Add a test node to this node", (node) => {
+                let new_nodes = []
+                let new_edges = []
+                let positions = []
+                let num = 3
+
+                // spread out N points (x,y) randomly around the given point to a max of r distance
+                let angle = 2*Math.PI / num  // angle to spread out by
+                for (let i=0; i<num; i++) {
+                    let x = node.x + node.size * Math.cos(angle*i)
+                    let y = node.y + node.size * Math.sin(angle*i)
+                    positions.push([x, y])
+                }
+
+                for (let i=0; i<num; i++) {
+                    let new_node = {
+                        key: "test_node_"+n,
+                        attributes: {
+                            label: "Test "+n,
+                            x: positions[i][0],
+                            y: positions[i][1]
+                        }
+                    }
+                    let new_edge = {
+                        key: "test_edge_"+n,
+                        source: node.key,
+                        target: "test_node_"+n,
+                        attributes: {
+                            data: {
+                                scenes: 1
+                            }
+                        }
+                    }
+                    n++
+                    new_nodes.push(new_node)
+                    new_edges.push(new_edge)
+                }
+
+                graph.add({nodes: new_nodes, edges: new_edges})
+            })
+        })
+    </script>
+{% endblock %}
+
+{% block body %}
+  <div id="graphAPI-container" style="width: 100%; height: calc(100vh - 80px);"></div>
+{% endblock %}
+
+
+

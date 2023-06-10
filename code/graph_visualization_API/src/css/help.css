@@ -1,0 +1,18 @@
+/* Hide images */
+#help div.page img {
+  display: none;
+}
+#help h4 {
+  margin: 1em 0em 0em 0em;
+}
+#help li {
+  cursor: default;
+}
+/* highlight keywords */
+#help mark {
+  font-weight: bold;
+  /*background-color: #88ddbb;*/
+  background-color: inherit;
+  border-radius: 0.3em;
+  padding: 0em 0em 0em 0em;
+}

@@ -1,0 +1,116 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  /* override any layout background image */
+  background-image: none;
+  background-color: white;
+}
+/* div used by sigma */
+#sigma-container {
+  /*min-height: 10px;
+    min-width: 10px; */
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* disable bootstrap's stupid button outline when focused */
+.btn:focus {
+  box-shadow: none;
+}
+/* all interface divs */
+div.interface {
+  position: absolute;
+  margin: 1em;
+  display: flex;
+}
+div.interface button {
+  cursor: pointer;
+  padding: 0.3em;
+}
+div.interface button img {
+  height: 2em;
+  margin: 0.4em;
+}
+div.interface#top-right {
+  right: 0;
+  top: 0;
+}
+div.interface#top-left {
+  left: 0;
+  top: 0;
+}
+div.interface#bottom-right {
+  right: 0;
+  bottom: 0;
+}
+div.interface#bottom-left {
+  left: 0;
+  bottom: 0;
+}
+/* Upload notification */
+div#uploaded_file {
+  position: absolute;
+  right: 0em;
+  top: 5em;
+  border: 2px solid #aaccaa;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+/* Tree buttons */
+div.interface div#tree {
+  position: absolute;
+  top: 8em;
+  right: 0em;
+}
+div.interface div#tree > span {
+  font-weight: bold;
+  display: block;
+  margin: 5em 0em 0.5em 0em;
+}
+
+#tree {
+  margin: 0em 0em 1em 0em;
+}
+/* filters */
+/* div containing each individual slider */
+#filters div.slider {
+  margin: 0.4em 2em 3em 2em;
+}
+/* background of a "filled" slider section */
+#filters .noUi-connect {
+  background: grey;
+}
+/* hide non-active tooltips ("div" here because selector needs to be more specific than uislider's) */
+div.noUi-tooltip {
+  display: none;
+}
+/* show active slider tooltips */
+div.noUi-active .noUi-tooltip {
+  display: block;
+}
+/* Tutorial Tooltips */
+.tippy-box[data-theme~='tutorial'] {
+  background-color: #5dd;
+  color: #000;
+  width: max-content;
+  text-align: center;
+}
+.tippy-box[data-theme~='tutorial'] .tippy-arrow {
+  color: #5dd;
+}
+.tippy-box[data-theme~='tutorial'] .tippy-content button {
+  display: block;
+  margin: 5% 5% 0 5% !important;
+  width: 90%;
+  border: none;
+  border-radius: 6px;
+  background-color: #cdd;
+}
+.tippy-box[data-theme~='tutorial'] .tippy-content button:hover {
+  background-color: #bcc;
+}
+/* help gif tooltips */
+.tippy-box[data-theme~='help-gifs'] .tippy-content {
+  padding: 3px;
+}

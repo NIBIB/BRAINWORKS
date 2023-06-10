@@ -1,0 +1,13 @@
+/* All bootstrap dropdown menus */
+ul.dropdown-menu li {
+    cursor: pointer;
+}
+
+/* Settings Menu */
+.form-check-input, .form-check-label {
+    /* Bootstrap checkboxes and switches */
+    cursor: pointer;
+    user-select: none;
+}
+
+

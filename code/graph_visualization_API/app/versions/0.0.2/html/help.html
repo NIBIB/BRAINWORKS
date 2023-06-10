@@ -1,0 +1,84 @@
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="help-menu">
+  <div class="offcanvas-header">
+    <h3 class="offcanvas-title">Instructions</h3>
+    <button id="tutorial-button" class="btn btn-primary">Take Tutorial</button>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <nav>
+      <div class="nav nav-tabs" role="tablist">
+      </div>
+    </nav>
+
+    <div class="tab-content">
+      <div class="page" name="Exploring">
+        <h4>Moving</h4>
+        <ul>
+          <li><mark>Click and drag an empty space</mark> to move the viewing window. <img src="http://52.15.148.228/build/0.0.2/gifs/drag.gif"/>
+          <li><mark>Click the Center button</mark> to move back to the default position and zoom level. <img src="http://52.15.148.228/build/0.0.2/gifs/home.gif"/>
+        </ul>
+
+        <h4>Zooming</h4>
+        <ul>
+          <li><mark>Use the scroll wheel</mark> to expand the graph in and out. <img src="http://52.15.148.228/build/0.0.2/gifs/zoom_bbox.gif"/></li>
+          <li><mark>Hold ctrl while scrolling</mark> to zoom without expanding. <img src="http://52.15.148.228/build/0.0.2/gifs/zoom_sigma.gif"/></li>
+        </ul>
+
+        <h4>Searching</h4>
+        <ul>
+          <li><mark>Use the search bar</mark> to highlight all nodes whose name contains that query. <img src="http://52.15.148.228/build/0.0.2/gifs/search_partial.gif"/></li>
+          <li><mark>Click the button to the left of the search bar</mark> to switch between searching for nodes or edges. <img src="http://52.15.148.228/build/0.0.2/gifs/search_edge.gif"/></li>
+          <li><mark>Enter names separated by commas</mark> to search for multiple nodes or edges. <img src="http://52.15.148.228/build/0.0.2/gifs/search_multiple.gif"/></li>
+          <li><mark>Click away</mark> from the search bar to clear the current search. <img src="http://52.15.148.228/build/0.0.2/gifs/search_clear.gif"/></li>
+        </ul>
+      </div>
+
+      <div class="page" name="Interaction">
+        <h4>Organization</h4>
+        <ul>
+          <li><mark>Click and drag a node</mark> to change its position. <img src="http://52.15.148.228/build/0.0.2/gifs/drag_node.gif"/></li>
+          <li><mark>Click the Organize button</mark> to optimize the arrangement of nodes. <img src="http://52.15.148.228/build/0.0.2/gifs/organize.gif"/></li>
+          <!-- <li><mark>Click the Physics button</mark> to enable and disable a live physics simulation of the graph. <img src="/static/http://52.15.148.228/build/0.0.2/gifs/physics.gif"/></> -->
+        </ul>
+
+        <h4>Node Connections</h4>
+        <ul>
+          <li><mark>Left-click a node</mark> to highlight its immediately adjacent neighbors. <img src="http://52.15.148.228/build/0.0.2/gifs/select.gif"/></li>
+          <li><mark>Left-click a second node</mark> to highlight the shortest path between the two, if one exists. <img src="http://52.15.148.228/build/0.0.2/gifs/shortest_path.gif"/></li>
+        </ul>
+
+        <h4>Cluster Tree (if available)</h4>
+        <ul>
+          <li><mark>Click the + or - buttons</mark> to expand and collapse all clusters. <img src="http://52.15.148.228/build/0.0.2/gifs/cluster.gif"/></li>
+          <li><mark>Double-click a node</mark> to expand it if it is a cluster. <img src="http://52.15.148.228/build/0.0.2/gifs/cluster_single.gif"/></li>
+        </ul>
+      </div>
+
+      <div class="page" name="Customize" id="docs">
+        <h4>Download</h4>
+        <ul>
+          <li><mark>Click the Download</mark> button to download the current graph in JSON format.</li>
+        </ul>
+
+        <h4>Upload</h4>
+        <ul>
+          <li><mark>Click the Upload</mark> button to upload a properly formatted JSON graph of your own.</li>
+          <li>For the full specifications on the format, see the Graph API documentation:</li>
+        </ul>
+        <a class="btn btn-primary" href="{{domain+url_for('documentation')}}" target="_blank" rel="noreferrer noopener">Documentation</a>
+      </div>
+
+      <!--
+        <div class="page">
+          <h4>title</h3>
+          <ul>
+            <li>texthere <img src="http://52.15.148.228/build/0.0.2/gifs/test.gif"/></li>
+            <li>texthere <img src="http://52.15.148.228/build/0.0.2/gifs/test.gif"/></li>
+          </ul>
+        </div>
+      -->
+    </div>
+  </div>
+</div>
+

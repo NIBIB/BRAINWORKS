@@ -1,0 +1,54 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "key": "node_A",
+        "attributes": {
+          "label": "Node A",
+          "data": {
+            "some_number": 1,
+            "some_other_number": 3
+          }
+        }
+      },
+      {
+        "key": "node_B",
+        "attributes": {
+          "label": "Node B",
+          "data": {
+            "some_number": 2,
+            "some_other_number": 2
+          }
+        }
+      },
+      {
+        "key": "node_C",
+        "attributes": {
+          "label": "Node C",
+          "data": {
+            "some_number": 3,
+            "some_other_number": 1
+          }
+        }
+      }
+  ],
+  "edges": [
+      {
+        "key": "A-B",
+        "source": "node_A",
+        "target": "node_B"
+      },
+      {
+        "key": "B-C",
+        "source": "node_B",
+        "target": "node_C"
+      }
+    ]
+  },
+  "config": {
+    "maps": {
+      "node_x": {"data": "some_number", "min": 0, "max": 1},
+      "node_y": {"data": "some_other_number", "min": 0, "max": 1}
+    }
+  }
+}

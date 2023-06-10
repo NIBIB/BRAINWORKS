@@ -1,0 +1,26 @@
+#documentation {
+    background-color: white;
+    font-family: arial;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    padding: 2em;
+}
+
+#documentation ul {
+    margin-top: 0em;
+}
+
+#documentation p {
+    margin-bottom: 0em;
+}
+
+#documentation code {
+    padding: .2rem .4rem;
+    font-size: 90%;
+    color: #bd4147;
+    background-color: #f8f9fa;
+    border-radius: .25rem;
+}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Documentation
+{% endblock %}
+
+{% block head %}
+<script src="{{url}}/build/{{version}}/js/documentation.min.js"></script>
+<style>
+#nav {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 250px;
+}
+#nav-collapsed {
+
+}
+code {
+  display: inline-block;
+  white-space: pre-wrap !important;
+}
+</style>
+{% endblock %}
+
+{% block nav %}
+<li>
+    <a uk-icon="triangle-down">version {{version}}</a>
+    <div class="uk-navbar-dropdown uk-padding-small uk-width-auto" uk-dropdown="mode: click">
+        <ul class="uk-nav uk-navbar-dropdown-nav">
+            {% for ver in versions %}
+            <li><a href="/documentation/{{ver}}">v{{ver}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</li>
+{% endblock %}
+
+{% block body %}
+<div class="uk-section uk-section-secondary uk-preserve-color" uk-height-viewport="offset-top: true">
+<div class="uk-container uk-container-xlarge">
+    <div uk-grid>
+        <div class="uk-width-1-5 uk-margin-right uk-light uk-visible@m">
+            <div id="nav">
+                <h1>Contents</h1>
+            </div>
+        </div>
+        <div id="docs" class="uk-card-default uk-card-body uk-border-rounded uk-width-expand">{{ html | safe}}</div>
+    </div>
+</div>
+</div>
+{% endblock %}
+

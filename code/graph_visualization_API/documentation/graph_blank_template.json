@@ -1,0 +1,35 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "key": "",
+        "attributes": {
+          "data": {}
+        }
+      }
+  ],
+  "edges": [
+      {
+        "key": "",
+        "source": "",
+        "target": "",
+        "attributes": {
+          "data": {}
+        }
+      }
+    ]
+  },
+  "config": {
+    "maps": {
+      "node_size": {"data": "", "min": 0, "max": 1},
+      "edge_size": {"data": "", "min": 0, "max": 1},
+      "node_color": {"data": "", "map":  {}},
+      "edge_color": {"data": "", "map": {}}
+    },
+    "filters": {
+      "filter_1": {"data": "", "type": "node"},
+      "filter_2": {"data": "", "type": "edge"},
+      "filter_3": {"data": "", "type": "both"}
+    }
+  }
+}
