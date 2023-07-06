@@ -133,7 +133,7 @@ jedi==0.18.0
 jellyfish==0.8.8
 Jinja2==3.0.1
 jmespath==0.10.0
-joblib==1.0.1
+joblib==1.2.0
 jsii==1.40.0
 json5==0.9.6
 jsonnet==0.17.0
