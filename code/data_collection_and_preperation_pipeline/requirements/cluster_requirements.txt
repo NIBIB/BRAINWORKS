@@ -83,7 +83,7 @@ configparser==5.0.2
 conllu==4.4.1
 connexion==2.7.0
 constructs==3.3.161
-cryptography==35.0.0
+cryptography==41.0.2
 cycler==0.10.0
 cymem==2.0.5
 debugpy==1.4.3
