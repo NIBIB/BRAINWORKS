@@ -205,7 +205,7 @@ pycairo==1.20.1
 pycountry==20.7.3
 pycparser==2.20
 pydantic==1.8.2
-Pygments==2.10.0
+Pygments==2.15.0
 PyMySQL==1.0.2
 pyparsing==2.4.7
 pyrsistent==0.18.0
