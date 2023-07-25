@@ -59,7 +59,7 @@ botocore==1.29.58
 # Editable install with no version control (brain==0.0.1)
 -e /home/ubuntu/brainworks-public
 cattrs==22.2.0
-certifi==2022.12.7
+certifi==2023.7.22
 charset-normalizer==3.0.1
 click==8.1.3
 clickclick==20.10.2
